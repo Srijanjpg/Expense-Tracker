@@ -1,0 +1,293 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #181824;
+    color: #f3f3fa;
+}
+
+.main-bg {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #181824;
+}
+
+.dashboard {
+    display: flex;
+    gap: 40px;
+    background: #23233a;
+    border-radius: 40px;
+    padding: 48px 40px;
+    box-shadow: 0 8px 40px rgba(20, 20, 40, 0.25);
+    max-width: 1200px;
+    width: 95vw;
+}
+
+.summary-card,
+.form-card {
+    background: #23233a;
+    border-radius: 25px;
+    /* Stronger, more visible shadow */
+    box-shadow: 0 12px 48px 0 rgba(80, 60, 180, 0.32), 0 2px 12px 0 rgba(0,0,0,0.22);
+    border: 1.5px  #a084ca; /* Add a purple accent border */
+    padding: 40px 36px 36px 36px;
+    min-width: 380px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.greeting {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 0 32px 0;
+    color: #f3f3fa;
+    letter-spacing: 1px;
+}
+
+.total-card {
+    background: #4b295a;
+    border-radius: 25px;
+    box-shadow: 0 8px 32px rgba(160, 132, 202, 0.25), 0 2px 8px rgba(0,0,0,0.18);
+    padding: 18px 32px 10px 32px;
+    margin-bottom: 32px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.total-label {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.total-amount {
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.breakdown-label {
+    font-size: 2rem;
+    color: #b0b0b0;
+    margin-bottom: 18px;
+    margin-top: 0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.breakdown-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.breakdown-list li {
+    display: flex;
+    align-items: center;
+    background: #2e2e48;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    padding: 16px 18px;
+    box-shadow: 0 2px 8px rgba(20, 20, 40, 0.12);
+    gap: 18px;
+}
+
+.icon-box {
+    width: 38px;
+    height: 38px;
+    background: #3a2e5a;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-right: 8px;
+}
+
+.expense-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #f3f3fa;
+}
+
+.expense-meta {
+    font-size: 0.95rem;
+    color: #b0b0b0;
+    margin-top: 2px;
+}
+
+.expense-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.expense-amount {
+    margin-left: auto;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #f3f3fa;
+}
+
+.delete-btn {
+    background: #ffb4a2;
+    color: #23233a;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    width: 32px;
+    height: 32px;
+    margin-left: 12px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 2px 8px rgba(255, 88, 88, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-btn:hover {
+    background: #ff5858;
+    color: #fff;
+    transform: scale(1.08);
+}
+
+.form-card {
+    background: #23233a;
+    border-radius: 28px;
+    /* Stronger, more visible shadow */
+    box-shadow: 0 12px 48px 0 rgba(80, 60, 180, 0.32), 0 2px 12px 0 rgba(0,0,0,0.22);
+    border: 2px #a084ca; /* Add a purple accent border */
+    padding: 40px 36px 36px 36px;
+    min-width: 420px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.profile-pic {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #4b295a url('https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png') center/cover no-repeat;
+    display: inline-block;
+}
+
+.profile-name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #f3f3fa;
+}
+
+#expense-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    background: #2e2e48;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 1.2rem;
+    box-shadow: 0 1px 4px rgba(20, 20, 40, 0.10);
+}
+
+.input-icon {
+    margin-right: 12px;
+    color: #a084ca;
+    font-size: 1.3rem;
+}
+
+#expense-form input[type="number"],
+#expense-form input[type="text"],
+#expense-form input[type="date"] {
+    border: none;
+    background: transparent;
+    font-size: 1.2rem;
+    padding: 8px 0;
+    outline: none;
+    width: 100%;
+    color: #f3f3fa;
+}
+
+#expense-form input[type="number"]:focus,
+#expense-form input[type="text"]:focus,
+#expense-form input[type="date"]:focus {
+    border-bottom: 2px solid #a084ca;
+    background: #23233a;
+}
+
+.radio-row {
+    display: flex;
+    gap: 18px;
+    font-size: 1.1rem;
+    color: #f3f3fa;
+    margin-left: 4px;
+}
+
+.radio-row label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+}
+
+.add-btn {
+    margin-top: 10px;
+    padding: 14px 0;
+    background: linear-gradient(90deg, #a084ca 0%, #4b295a 100%);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 12px rgba(95, 61, 196, 0.10);
+    transition: background 0.2s, transform 0.1s;
+}
+
+.add-btn:hover {
+    background: linear-gradient(90deg, #4b295a 0%, #a084ca 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+#expense-form input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(38%) sepia(23%) saturate(1297%) hue-rotate(223deg) brightness(0.95);
+    cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+    .dashboard {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        padding: 24px 8px;
+    }
+    .summary-card, .form-card {
+        min-width: unset;
+        max-width: 98vw;
+        width: 100%;
+    }
+}

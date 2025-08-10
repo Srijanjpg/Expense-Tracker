@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Expense Tracker</title>
+</head>
+<body>
+    <div class="main-bg">
+        <div class="dashboard">
+            <div class="summary-card">
+                <h2 class="greeting" id="greeting">Hello, User</h2>
+                <div class="total-card">
+                    <div class="total-label">Total :</div>
+                    <div class="total-amount" id="total-amount-display">₹ 0.00</div>
+                </div>
+                <div class="breakdown-label">Breakdown</div>
+                <ul class="breakdown-list" id="breakdown-list"></ul>
+            </div>
+            <div class="form-card">
+                <div class="profile-row">
+                    <div class="profile-pic"></div>
+                    <div class="profile-name" id="profile-name">User Name</div>
+                </div>
+                <form id="expense-form" autocomplete="off">
+                    <div class="input-row">
+                        <span class="input-icon">₹</span>
+                        <input type="number" id="amount-input" placeholder="Amount" min="0.01" step="0.01" required>
+                    </div>
+                    <div class="input-row">
+                        <span class="input-icon">🏷️</span>
+                        <input type="text" id="desc-input" placeholder="Description" required>
+                    </div>
+                    <div class="radio-row">
+                        <label><input type="radio" name="category" value="Food/Beverage" checked>Food/Beverage</label>
+                        <label><input type="radio" name="category" value="Travel/Commute">Travel/Commute</label>
+                        <label><input type="radio" name="category" value="Shopping">Shopping</label>
+                    </div>
+                    <div class="input-row">
+                        <input type="date" id="date-input" required>
+                    </div>
+                    <button type="submit" class="add-btn">Add to Expense</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
