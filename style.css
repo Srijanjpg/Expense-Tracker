@@ -256,7 +256,7 @@ body, html {
 
 .add-btn {
     margin-top: 10px;
-    padding: 14px 0;
+    padding: 14px 12px;
     background: linear-gradient(90deg, #a084ca 0%, #4b295a 100%);
     color: #fff;
     border: none;
@@ -276,6 +276,60 @@ body, html {
 #expense-form input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(38%) sepia(23%) saturate(1297%) hue-rotate(223deg) brightness(0.95);
     cursor: pointer;
+}
+
+/* Login Overlay */
+.login-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(24,24,36,0.96);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.login-form {
+    background: #23233a;
+    padding: 40px 32px 32px 32px;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(90, 78, 147, 0.25), 0 1.5px 8px 0 rgba(0,0,0,0.18);
+    border: 0.1px #a084ca;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 320px;
+    gap: 18px;
+}
+
+.accent-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 18px 0;
+    color: #a084ca;
+    letter-spacing: 1px;
+    text-align: center;
+    background: linear-gradient(90deg, #a084ca 0%, #4b295a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#login-username {
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1.5px solid #2e2e48;
+    font-size: 1.1rem;
+    width: 100%;
+    outline: none;
+    background: #181824;
+    color: #f3f3fa;
+    transition: border 0.2s;
+}
+
+#login-username:focus {
+    border: 1.5px solid #a084ca;
+    background: #23233a;
 }
 
 @media (max-width: 1100px) {
